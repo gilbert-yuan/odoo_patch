@@ -5,7 +5,9 @@
     'version' : '1.1',
     'summary': """
     可以配置edit create delete等参数实现动态（根据每条记录）的显示删除，新建、编辑按钮
-        edit='{"domain": "state!=\"draft\""}'""",
+        edit='{"color_domain": "state!=\"draft\""}'
+        为啥叫color_domain 呢？因为最开始发现这种写法是在8上面的color的写法，是这样的。从这个上面获取的灵感。
+         """,
     'sequence': 15,
     'category': 'tools',
     'depends': ['base'],
