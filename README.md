@@ -14,7 +14,7 @@
         }
     });
 ```
-- [] odoo中radio 不可以横向排列，看配置项是可以的看了js才发现有BUG
+- [ ] odoo中radio 不可以横向排列，看配置项是可以的看了js才发现有BUG
 ```js
      var include_radio = core.form_widget_registry.get('radio');
      include_radio.include({
