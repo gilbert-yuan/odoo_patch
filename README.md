@@ -4,7 +4,7 @@
          domain 表示方式 edit='{"color_domain": "state!=\\"draft\\""}'
  
  ### 下面几个带详细代码的都是项目中遇到的问题，只是在odoo 10 中的解决方案。稍后测试看是否12中也有，然后进行升级
-- []  odoo 中 Many2one搜索更多时搜索不出想要的结果 只能搜索出前160条中满足条件记录数（10.0中发现的以后版本有没有这个问题还未测试）
+- [ ]  odoo 中 Many2one搜索更多时搜索不出想要的结果 只能搜索出前160条中满足条件记录数（10.0中发现的以后版本有没有这个问题还未测试）
 ```js
     var form_common = require('web.form_common');
     form_common.SelectCreateDialog.include({
@@ -14,7 +14,7 @@
         }
     });
 ```
--[] odoo中radio 不可以横向排列，看配置项是可以的看了js才发现有BUG
+-[ ] odoo中radio 不可以横向排列，看配置项是可以的看了js才发现有BUG
 ```js
      var include_radio = core.form_widget_registry.get('radio');
      include_radio.include({
@@ -26,7 +26,7 @@
         },
     });   
 ```
--[] odoo中点击button直接下载文件解决方案（仅限于小文件，大文件等待时间过长不适合这种方式）
+-[ ] odoo中点击button直接下载文件解决方案（仅限于小文件，大文件等待时间过长不适合这种方式）
 曾经尝试的方案- return一个action target 为new 会被系统拦截，return一个action target 为self 这个按钮只能点击一次 。
 所以费劲心思想出这个方案。
 ```python 
@@ -59,7 +59,7 @@
     });
     core.form_widget_registry.add('down_load_file', ButtonDownloadFiled);
 ```
--[] odoo 中扫码的场景， 运用onchange 可以完美解决单个输入框的问题， 可是既要输入号码，又要输入数量的场景下就很难处理
+-[ ] odoo 中扫码的场景， 运用onchange 可以完美解决单个输入框的问题， 可是既要输入号码，又要输入数量的场景下就很难处理
 下面场景中需要配合onchange，在onchange中加入字段对应表中加入字段并需要跳到下一个输入框时，onchange中self.autofocus = True
 
 ```js
@@ -95,7 +95,7 @@ FormView.include({
 
 ```
 
--[] odoo 一个列表翻到了第3页需要查看一条的详细内容，点进去查看编辑form 返回tree 视图，然后直接跳到了第一页，one2many删除单行会跳到上一页，等翻页问题解决，
+-[ ] odoo 一个列表翻到了第3页需要查看一条的详细内容，点进去查看编辑form 返回tree 视图，然后直接跳到了第一页，one2many删除单行会跳到上一页，等翻页问题解决，
 ```js
  ListView.Groups.include({
         render_dataset: function () {
